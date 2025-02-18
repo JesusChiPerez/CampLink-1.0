@@ -7,27 +7,32 @@
         @method('PUT')
         <div class="form-row">
             <label>Title</label>
-            <input class="form-control" type="text" name="title" value="{{ $product->title }}" required>
+            <input class="form-control" type="text" name="title" value="{{ old('title') ?? $product->title }}" required>
         </div>
         <div class="form-row">
             <label>Description</label>
-            <input class="form-control" type="text" name="description" value="{{ $product->description }}" required>
+            <input class="form-control" type="text" name="description"
+                value="{{ old('description') ?? $product->description }}" required>
         </div>
         <div class="form-row">
             <label>Price</label>
             <input class="form-control" type="number" name="price" min="1.00" step="0.01"
-                value="{{ $product->price }}" required>
+                value="{{ old('price') ?? $product->price }}" required>
         </div>
         <div class="form-row">
             <label>Stock</label>
-            <input class="form-control" type="numer" name="stock" min="0" value="{{ $product->stock }}" required>
+            <input class="form-control" type="numer" name="stock" min="0"
+                value="{{ old('stock') ?? $product->stock }}" required>
         </div>
         <div class="form-row">
             <label>Status</label>
             <select class="custom-select" name="status" required>
-                <option value="">Select...</option>
-                <option {{ $product->status == 'available' ? 'selected' : '' }} value="available">Available</option>
-                <option {{ $product->status == 'unavailable' ? 'selected' : '' }} value="unavailable">Unavailable</option>
+                <option
+                    {{ (old('status') == 'available' ? 'selected' : $product->status == 'available') ? 'selected' : '' }}
+                    value="available">Available</option>
+                <option
+                    {{ (old('status') == 'unavailable' ? 'selected' : $product->status == 'unavailable') ? 'selected' : '' }}
+                    value="unavailable">Unavailable</option>
             </select>
         </div>
         <div class="form-row">

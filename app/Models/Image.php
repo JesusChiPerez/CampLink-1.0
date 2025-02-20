@@ -12,4 +12,10 @@ class Image extends Model
     protected $fillable = [
         'path',
     ];
+
+    // realción polimórfica
+    public function imageable()
+    {
+        return $this->morphTo();
+    }
 }

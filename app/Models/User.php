@@ -2,11 +2,14 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use App\Models\Order;
+use App\Models\Payment;
+use App\Models\Image;
+
 
 class User extends Authenticatable
 {
@@ -49,4 +52,22 @@ class User extends Authenticatable
      * @var array
      */
     protected $dates = ['admin_since'];
+
+    // relación 1 a muchos
+    public function orders()
+    {
+        return $this->hasMany(Order::class, 'customer_id');
+    }
+
+    // desde users trae los payments pasando por orders
+    public function payments()
+    {
+        return $this->hasManyThrough(Payment::class, Order::class, 'customer_id');
+    }
+
+    // realción polimórfica 1 a 1
+    public function image()
+    {
+        return $this->morphOne(Image::class, 'imageable');
+    }
 }

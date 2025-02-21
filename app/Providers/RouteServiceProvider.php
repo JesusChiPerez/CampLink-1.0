@@ -42,8 +42,15 @@ class RouteServiceProvider extends ServiceProvider
     {
         $this->mapApiRoutes();
         $this->mapWebRoutes();
+        $this->mapPanelRoutes();
     }
 
+    /**
+     * Define the "api" routes for the application.
+     * These routes are typical stateless.
+     *
+     * @return void
+     */
     protected function mapApiRoutes()
     {
         Route::prefix('api')
@@ -52,11 +59,30 @@ class RouteServiceProvider extends ServiceProvider
             ->group(base_path('routes/api.php'));
     }
 
+    /**
+     * Define the "web" routes for the application.
+     * These routes are typical stateless.
+     *
+     * @return void
+     */
     protected function mapWebRoutes()
     {
         Route::middleware('web')
             ->namespace($this->namespace)
             ->group(base_path('routes/web.php'));
+    }
+
+    /**
+     * Define the "admin panel" routes for the application.
+     *
+     * @return void
+     */
+    protected function mapPanelRoutes()
+    {
+        Route::prefix('panel')
+            ->middleware(['web', 'auth', 'is.admin'])
+            ->namespace("{$this->namespace}\Panel")
+            ->group(base_path('routes/panel.php'));
     }
 
     /**

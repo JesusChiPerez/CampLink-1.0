@@ -67,4 +67,14 @@ Sigue estos pasos para configurar la aplicación en tu entorno local:
     ```
 10. **Visita la aplicación en tu navegador:** [//http://127.0.0.1:8000/](//http://127.0.0.1:8000/)
    
+11. **Registra un usuario en la app y haz que sea administrador:**
 
+    ```bash
+    php artisan tinker
+    ```
+    ```bash
+    $user = App\Models\User::all()->last()->last();
+    $user->forceFill(['admin_since' => now()]);
+    $user->save();
+    ```
+Ya puedes acceder a la aplicación completamente funcional.

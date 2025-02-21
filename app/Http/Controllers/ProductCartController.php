@@ -6,7 +6,7 @@ use App\Models\Cart;
 use App\Models\Product;
 use App\Services\CartService;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Cookie;
+
 
 class ProductCartController extends Controller
 {

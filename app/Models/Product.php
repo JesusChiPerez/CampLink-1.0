@@ -9,6 +9,7 @@ use Laravel\Sanctum\HasApiTokens;
 use App\Models\Cart;
 use App\Models\Order;
 use App\Models\Image;
+use PhpParser\Node\Expr\FuncCall;
 
 class Product extends Model
 {
@@ -43,5 +44,10 @@ class Product extends Model
     public function images()
     {
         return $this->morphMany(Image::class, 'imageable');
+    }
+
+    public function scopeAvailable($query)
+    {
+        $query->where('status', 'available');
     }
 }

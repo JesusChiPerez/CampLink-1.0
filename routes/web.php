@@ -18,6 +18,10 @@ Route::get('/', 'MainController@index')->name('main');
 // ruta de recurso
 Route::resource('products', 'ProductController');
 
+Route::resource('products.carts', 'ProductCartController')->only(['store', 'destroy']);
+
+Route::resource('carts', 'CartController')->only(['index']);
+
 // Route::get('products', 'ProductController@index')->name('products.index');
 
 // Route::get('products/create', 'ProductController@create')->name('products.create');

@@ -9,11 +9,14 @@ use Laravel\Sanctum\HasApiTokens;
 use App\Models\Cart;
 use App\Models\Order;
 use App\Models\Image;
-use PhpParser\Node\Expr\FuncCall;
+use App\Scopes\AvailableScope;
+
 
 class Product extends Model
 {
     use HasApiTokens, HasFactory, Notifiable;
+
+    protected $table = 'products';
 
     /**
      * The attributes that are mass assignable.
@@ -27,6 +30,14 @@ class Product extends Model
         'stock',
         'status',
     ];
+
+    /**
+     * The "booted" method of the model.
+     */
+    protected static function booted(): void
+    {
+        static::addGlobalScope(new AvailableScope);
+    }
 
     // relación polimórfica muchos a muchos (tabla intermedia que además trae quantity)
     public function carts()

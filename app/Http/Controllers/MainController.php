@@ -8,7 +8,8 @@ class MainController extends Controller
 {
     public function index()
     {
-        $products = Product::available()->get();
+        // \DB::connection()->enableQueryLog();
+        $products = Product::all();
 
         return view('welcome')->with(
             [

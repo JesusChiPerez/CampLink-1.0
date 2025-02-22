@@ -7,6 +7,8 @@ use App\Models\Product;
 
 class PanelProduct extends Product
 {
+    use HasFactory;
+
     /**
      * The "booted" method of the model.
      */

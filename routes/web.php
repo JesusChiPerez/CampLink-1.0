@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,6 +24,9 @@ Route::resource('orders', 'OrderController')->only(['create', 'store']);
 
 Route::resource('orders.payments', 'OrderPaymentController')->only(['create', 'store']);
 
-Auth::routes();
+Auth::routes([
+    'verify' => true
+]);
+
 
 // Route::get('/home', 'HomeController@index')->name('home');

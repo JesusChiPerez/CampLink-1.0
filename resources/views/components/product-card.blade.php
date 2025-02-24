@@ -4,7 +4,7 @@
         <div class="carousel-inner">
             @foreach ($product->images as $image)
                 <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
-                    <img class="d-block w-100 card-image-top" src="{{ asset($image->path) }}" height="500px">
+                    <img class="d-block w-100 card-img-top" src="{{ asset($image->path) }}" height="500">
                 </div>
             @endforeach
         </div>

@@ -14,7 +14,7 @@ Antes de comenzar, asegúrate de tener instalado lo siguiente en tu máquina:
 
 Sigue estos pasos para configurar la aplicación en tu entorno local:
 
-1.  **Clona el repositorio:**
+1. **Clona el repositorio:**
 
     ```bash
     git clone https://github.com/sanruicor/
@@ -22,59 +22,64 @@ Sigue estos pasos para configurar la aplicación en tu entorno local:
 
     ```
 
-2.  **Instala las dependencias de Composer:**
+2. **Instala las dependencias de Composer:**
 
     ```bash
     composer install
     ```
 
-3.  **Compia el archivo .env.example y renómbralo a .env:**
+3. **Compia el archivo .env.example y renómbralo a .env:**
 
     ```bash
     cp .env.example .env
     ```
 
-4.  **Genera la clave de la aplicación:**
+4. **Genera la clave de la aplicación:**
 
     ```bash
     php artisan key:generate
     ```
 
-5.  **Instala las dependencias:**
+5. **Instala las dependencias:**
 
     ```bash
     npm install
     ```
 
-6.  **Compila los assets:**
+6. **Compila los assets:**
 
     ```bash
     npm run dev
     ```
 
-7.  **Crea la base de datos:**
+7. **Crea la base de datos:**
 
     ```bash
     php artisan migrate:fresh --seed
     ```
 
-8.  **Inicia el servidor:**
+8. **Inicia el servidor:**
 
     ```bash
     php artisan serve
     ```
 
-9.  **Visita la aplicación en tu navegador:** [//http://127.0.0.1:8000/](//http://127.0.0.1:8000/)
+9. **Visita la aplicación en tu navegador:** [//http://127.0.0.1:8000/](//http://127.0.0.1:8000/)
 
-10. **Registra un usuario en la app y haz que sea administrador:**
+10. **Registra un usuario en la app**
 
-        ```bash
-        php artisan tinker
-        ```
-        ```bash
-        $user = App\Models\User::all()->last()->last();
-        $user->forceFill(['admin_since' => now()]);
-        $user->save();
-        ```
+11. **Verifica el email del usuario:**
+    Accede al log (archivo laravel.log) y busca el email de verificación del usuario registrado (al final del documento).
+    Cópialo en el navegador y ya podrás acceder a la aplicación.
 
-    Ya puedes acceder a la aplicación completamente funcional.
+12. **Haz que el usuario sea administrador:**
+
+    ```bash
+    php artisan tinker
+    ```
+
+    ```bash
+    $user = App\Models\User::all()->last()->last();
+    $user->forceFill(['admin_since' => now()]);
+    $user->save();
+    ```

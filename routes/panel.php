@@ -32,3 +32,7 @@ Route::resource('products', 'ProductController');
 // Route::match(['put', 'patch'], 'products/{product}', 'ProductController@update')->name('products.update');
 
 // Route::delete('products/{product}', 'ProductController@destroy')->name('products.destroy');
+
+Route::get('user', 'UserController@index')->name('users.index');
+
+Route::post('user/admin/{user}', 'UserController@toggleAdmin')->name('users.admin.toggle');

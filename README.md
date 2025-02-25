@@ -72,7 +72,7 @@ Sigue estos pasos para configurar la aplicación en tu entorno local:
     Accede al log (archivo laravel.log) y busca el email de verificación del usuario registrado (al final del documento).
     Cópialo en el navegador y ya podrás acceder a la aplicación.
 
-12. **Haz que el usuario sea administrador:**
+12. **Haz que el usuario sea administrador para acceder a todas las funciones:**
 
     ```bash
     php artisan tinker

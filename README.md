@@ -79,7 +79,7 @@ Sigue estos pasos para configurar la aplicación en tu entorno local:
     ```
 
     ```bash
-    $user = App\Models\User::all()->last()->last();
+    $user = App\Models\User::all()->last();
     $user->forceFill(['admin_since' => now()]);
     $user->save();
     ```

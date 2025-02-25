@@ -10,11 +10,13 @@ use App\Models\Cart;
 use App\Models\Order;
 use App\Models\Image;
 use App\Scopes\AvailableScope;
-
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Product extends Model
 {
-    use HasApiTokens, HasFactory, Notifiable;
+    use HasApiTokens, HasFactory, Notifiable, SoftDeletes;
+
+    // SoftDeleted añade una fecha de borrado, con lo que oculta del sistema pero no lo elimina permanentemente.
 
     protected $table = 'products';
 

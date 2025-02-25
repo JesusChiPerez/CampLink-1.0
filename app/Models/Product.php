@@ -43,6 +43,14 @@ class Product extends Model
     protected static function booted(): void
     {
         static::addGlobalScope(new AvailableScope);
+
+        static::updated(function ($product) {
+            if ($product->stock == 0 && $product->status == 'available') {
+                $product->status = 'unavailable';
+
+                $product->save();
+            }
+        });
     }
 
     // relación polimórfica muchos a muchos (tabla intermedia que además trae quantity)

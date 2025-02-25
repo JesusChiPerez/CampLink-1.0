@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\Models\Payment;
 use App\Models\User;
 use App\Models\Product;
+use App\Scopes\AvailableScope;
 
 class Order extends Model
 {
@@ -36,6 +37,10 @@ class Order extends Model
 
     public function getTotalAttribute()
     {
-        return $this->products->pluck('total')->sum();
+        return $this->products()
+            ->withoutGlobalScope(AvailableScope::class)
+            ->get()
+            ->pluck('total')
+            ->sum();
     }
 }

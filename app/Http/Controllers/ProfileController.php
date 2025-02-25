@@ -27,6 +27,7 @@ class ProfileController extends Controller
         return DB::transaction(function () use ($request) {
             $user = $request->user();
 
+            // filtra el array para evitar envío de campos nulos
             $user->fill(array_filter($request->validated()));
 
             if ($user->isDirty('email')) {

@@ -1,26 +1,67 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>Welcome</h1>
-    @empty($products)
-        <div class="alert alert-danger">
-            No products yet!
+{{-- Cargamos el CSS específico que creaste para esta sección --}}
+<link href="{{ asset('css/ofertas.css') }}" rel="stylesheet">
+<link href="{{ asset('css/publicate.css') }}" rel="stylesheet">
+<link href="{{ asset('css/aprovecha.css') }}" rel="stylesheet">
+<link href="{{ asset('css/footer.css') }}" rel="stylesheet">
+
+<div class="container-fluid px-0">
+    <div class="row align-items-center g-0 mb-5 bg-light">
+        <div class="col-md-6">
+            <img src="{{ asset('img/bienvenida/banner-bienvenida.png') }}" alt="Producción Agrícola" class="img-fluid w-100 shadow-sm">
         </div>
-    @else
+        <div class="col-md-6 px-5 py-4">
+            <h1 class="display-4 fw-bold">Bienvenido a tu tienda agrícola ideal!</h1>
+            <p class="lead mt-3">
+                Texto referente a lo que se dedica la tienda. Texto referente que se dedica la tienda. 
+                Texto referente que se dedica la tienda. Texto referente que se dedica la tienda.
+            </p>
+            <a href="#productos" class="btn btn-success btn-lg px-4 mt-3">Comprar ahora</a>
+        </div>
+    </div>
+
+    <div class="container mb-5 text-center">
         <div class="row">
-
-            {{-- @dump($products) --}}
-
-            @foreach ($products as $product)
-                <div class="col-3">
-                    @include('components.product-card')
-                </div>
-            @endforeach
-
-            {{-- @dump($products) --}}
-
-            {{-- @dd(\DB::getQueryLog()) --}}
-
+            <div class="col-md-4">
+                <img src="{{ asset('img/bienvenida/maiz.jpeg') }}" class="img-category mb-2" alt="Maíz">
+                <h5>Maíz</h5>
+            </div>
+            <div class="col-md-4">
+                <img src="{{ asset('img/bienvenida/frijol.jpg') }}" class="img-category mb-2" alt="Frijol">
+                <h5>Frijol</h5>
+            </div>
+            <div class="col-md-4">
+                <img src="{{ asset('img/bienvenida/rabano.jpg') }}" class="img-category mb-2" alt="Rábano">
+                <h5>Rábano</h5>
+            </div>
         </div>
-    @endempty
+    </div>
+
+    @include('users.ofertas-secciones')
+    @include('users.publicate-seccion')
+    @include('users.aprovecha-seccion')
+    @include('users.footer')
+
+    <hr id="productos" class="my-5">
+
+    <div class="container">
+        <h2 class="mb-4 text-center">Nuestros Productos</h2>
+        
+        @empty($products)
+            <div class="alert alert-danger text-center">
+                Aun no hay productos disponibles, por favor vuelva mas tarde.
+            </div>
+        @else
+            <div class="row">
+                @foreach ($products as $product)
+                    <div class="col-md-3 mb-4">
+                        @include('components.product-card')
+                    </div>
+                @endforeach
+            </div>
+        @endempty
+    </div>
+</div>
 @endsection

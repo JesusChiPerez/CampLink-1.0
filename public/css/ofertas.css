@@ -1,0 +1,64 @@
+.offers-container {
+    background-color: #38c172; /* El verde brillante de tu imagen */
+}
+
+.offer-card {
+    background: white;
+    border-radius: 0;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+    height: 100%;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.offer-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.offer-card h3 {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.offer-card p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.btn-dark-custom {
+    background-color: #2d3748;
+    color: white;
+    border-radius: 4px;
+    padding: 8px 25px;
+    text-transform: none;
+    font-weight: bold;
+}
+
+.btn-dark-custom:hover {
+    background-color: #1a202c;
+    color: white;
+}
+
+.badge-new {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #6574cd; /* Azul del círculo */
+    color: white;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    z-index: 10;
+}

@@ -1,0 +1,43 @@
+.publicate-container {
+    border-top: 1px solid #eee;
+}
+
+.icon-box-green {
+    background-color: #a7f3d0; /* Verde menta claro de la imagen */
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-box-green i {
+    font-size: 3rem;
+    color: #1a202c;
+}
+
+.label-box {
+    background-color: #edf2f7;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: inline-block;
+    color: #2d3748;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.btn-dark-subscribe {
+    background-color: #2d3748;
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+    text-transform: none;
+    border: none;
+}
+
+.btn-dark-subscribe:hover {
+    background-color: #1a202c;
+    color: white;
+}

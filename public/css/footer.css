@@ -1,0 +1,28 @@
+.footer-camplink {
+    background-color: #38c172; /* El mismo verde de las ofertas */
+}
+
+.footer-camplink h5 {
+    font-size: 1.1rem;
+    border-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.footer-camplink ul li {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.footer-camplink ul li a:hover {
+    text-decoration: underline !important;
+}
+
+.btn-dark-footer {
+    background-color: #555; /* Gris oscuro de la imagen */
+    color: white;
+    border: 1px solid white;
+}
+
+.btn-dark-footer:hover {
+    background-color: #333;
+    color: white;
+}

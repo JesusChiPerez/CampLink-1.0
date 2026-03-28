@@ -1,14 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>Your cart</h1>
+    <h1>Tu carrito de compras</h1>
     @if (!isset($cart) || $cart->products->isEmpty())
         <div class="alert alert-warning">
-            Your cart is empty.
+            Tu carrito está vacío.
         </div>
     @else
-        <h4 class="text-center"><strong>Your cart total: </strong>{{ $cart->total }}</h4>
-        <a class="btn btn-success mb-3" href="{{ route('orders.create') }}">Start order</a>
+        <h4 class="text-center"><strong>Tu total en el carrito: </strong>{{ $cart->total }}</h4>
+        <a class="btn btn-success mb-3" href="{{ route('orders.create') }}">Iniciar pedido</a>
         <div class="row">
             @foreach ($cart->products as $product)
                 <div class="col-3">
@@ -17,4 +17,6 @@
             @endforeach
         </div>
     @endif
+    <br>
+    @include('users.footer')
 @endsection

@@ -1,3 +1,4 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 <div class="publicate-container py-5 bg-white">
     <div class="container text-center mb-5">
         <h1 class="display-4 fw-bold text-dark">Publicate con nosotros</h1>
@@ -8,7 +9,7 @@
         <div class="row text-center g-4 justify-content-center">
             <div class="col-md-4">
                 <div class="icon-box-green mb-3">
-                    <i class="bi bi-pipette"></i>
+                    <i class="bi bi-geo-alt"></i>
                 </div>
                 <div class="label-box">Reconocimiento peninsular</div>
             </div>

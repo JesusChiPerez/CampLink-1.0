@@ -1,7 +1,9 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 <link href="{{ asset('css/bansup.css') }}" rel="stylesheet">
+<link href="{{ asset('css/footer.css') }}" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 <head>
     <meta charset="utf-8">
@@ -67,7 +69,7 @@
         <div class="input-group">
             <span class="input-group-text bg-light border-end-0">
                 <i class="bi bi-search"></i> </span>
-            <input name="search" class="form-control border-start-0 bg-light" type="search" placeholder="Search product" aria-label="Search">
+            <input name="search" class="form-control border-start-0 bg-light" type="search" placeholder="Buscar producto" aria-label="Search">
         </div>
     </form>
 </li>
@@ -75,13 +77,13 @@
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Iniciar Sesión') }}</a>
                                 </li>
                             @endif
 
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Registrarse') }}</a>
                                 </li>
                             @endif
                         @else

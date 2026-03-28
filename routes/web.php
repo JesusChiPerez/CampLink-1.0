@@ -14,7 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Ruta principal - PÚBLICA
 Route::get('/', 'MainController@index')->name('main');
+
+// ✅ Ruta de productos PÚBLICA - SIN MIDDLEWARE
+Route::get('/productos', 'MainController@productos')->name('products.index');
 
 Route::get('profile', 'ProfileController@edit')->name('profile.edit');
 

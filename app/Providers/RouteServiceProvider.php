@@ -41,8 +41,14 @@ class RouteServiceProvider extends ServiceProvider
     public function map()
     {
         $this->mapApiRoutes();
-        $this->mapWebRoutes();
+        
+        // ⚠️ IMPORTANTE: Cargar panel.php PRIMERO
+        // Esto evita que las rutas de panel interfieran con web.php
         $this->mapPanelRoutes();
+        
+        // ✅ Cargar web.php DESPUÉS
+        // Esto garantiza que /productos en web.php tiene prioridad
+        $this->mapWebRoutes();
     }
 
     /**
@@ -61,7 +67,7 @@ class RouteServiceProvider extends ServiceProvider
 
     /**
      * Define the "web" routes for the application.
-     * These routes are typical stateless.
+     * Estas rutas son PÚBLICAS - sin autenticación requerida
      *
      * @return void
      */
@@ -74,6 +80,7 @@ class RouteServiceProvider extends ServiceProvider
 
     /**
      * Define the "admin panel" routes for the application.
+     * TODAS estas rutas requieren autenticación, ser admin y email verificado
      *
      * @return void
      */

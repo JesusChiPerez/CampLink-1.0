@@ -18,7 +18,8 @@
                 Texto referente a lo que se dedica la tienda. Texto referente que se dedica la tienda. 
                 Texto referente que se dedica la tienda. Texto referente que se dedica la tienda.
             </p>
-            <a href="#productos" class="btn btn-success btn-lg px-4 mt-3">Comprar ahora</a>
+            {{-- El botón "Comprar ahora" ahora apunta a la ruta pública de productos --}}
+            <a href="{{ route('products.index') }}" class="btn btn-success btn-lg px-4 mt-3">Comprar ahora</a>
         </div>
     </div>
 
@@ -44,24 +45,7 @@
     @include('users.aprovecha-seccion')
     @include('users.footer')
 
-    <hr id="productos" class="my-5">
-
-    <div class="container">
-        <h2 class="mb-4 text-center">Nuestros Productos</h2>
-        
-        @empty($products)
-            <div class="alert alert-danger text-center">
-                Aun no hay productos disponibles, por favor vuelva mas tarde.
-            </div>
-        @else
-            <div class="row">
-                @foreach ($products as $product)
-                    <div class="col-md-3 mb-4">
-                        @include('components.product-card')
-                    </div>
-                @endforeach
-            </div>
-        @endempty
-    </div>
+    {{-- ✅ LA SECCIÓN DE PRODUCTOS HA SIDO ELIMINADA DE AQUÍ --}}
+    {{-- Ahora está en su propia ruta: /productos --}}
 </div>
 @endsection

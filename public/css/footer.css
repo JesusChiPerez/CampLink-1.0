@@ -1,28 +1,40 @@
 .footer-camplink {
-    background-color: #38c172; /* El mismo verde de las ofertas */
+    background: linear-gradient(135deg, #38c172, #2f9e5a);
 }
 
 .footer-camplink h5 {
+    margin-bottom: 15px;
     font-size: 1.1rem;
-    border-color: rgba(255, 255, 255, 0.5) !important;
 }
 
-.footer-camplink ul li {
+.footer-link {
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    display: block;
     margin-bottom: 8px;
-    font-size: 0.95rem;
+    transition: all 0.3s;
 }
 
-.footer-camplink ul li a:hover {
-    text-decoration: underline !important;
+.footer-link:hover {
+    color: #fff;
+    padding-left: 5px;
 }
 
 .btn-dark-footer {
-    background-color: #555; /* Gris oscuro de la imagen */
+    background-color: #2d3748;
     color: white;
-    border: 1px solid white;
+    border: none;
 }
 
 .btn-dark-footer:hover {
-    background-color: #333;
-    color: white;
+    background-color: #1a202c;
+}
+
+.footer-camplink input {
+    border: none;
+}
+
+.footer-camplink input:focus {
+    outline: none;
+    box-shadow: none;
 }

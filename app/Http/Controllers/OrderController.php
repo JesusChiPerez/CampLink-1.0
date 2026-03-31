@@ -63,7 +63,7 @@ class OrderController extends Controller
 
                     if ($product->stock < $quantity) {
                         throw ValidationException::withMessages([
-                            'product' => "There is not enough stock for the quantity you required of {$product->title}",
+                            'product' => "No hay suficiente stock para el producto {$product->title}",
                         ]);
                     }
 

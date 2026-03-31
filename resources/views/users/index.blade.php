@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>List of Users</h1>
+    <h1>Lista de Usuarios</h1>
 
     @empty($users)
         <div class="alert alert-warning">
-            The list of users is empty
+            Tu lista de usuarios está vacía
         </div>
     @else
         <div class="table-responsive">
@@ -13,10 +13,10 @@
                 <thead class="thead-light">
                     <tr>
                         <th>Id</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Admin Since</th>
-                        <th>Actions</th>
+                        <th>Nombre</th>
+                        <th>Correo Electrónico</th>
+                        <th>Permisos desde</th>
+                        <th>Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -26,14 +26,14 @@
                             <td>{{ $user->name }}</td>
                             <td>{{ $user->email }}</td>
                             <td>
-                                {{ optional($user->admin_since)->diffForHumans() ?? 'Never' }}
+                                {{ optional($user->admin_since)->diffForHumans() ?? 'Nunca' }}
                             </td>
                             <td>
                                 <form method="POST" class="d-inline"
                                     action="{{ route('users.admin.toggle', ['user' => $user->id]) }}">
                                     @csrf
                                     <button type="submit" class="btn btn-link">
-                                        {{ $user->isAdmin() ? 'Remove' : 'Make' }}
+                                        {{ $user->isAdmin() ? 'Quitar' : 'Hacer' }}
                                         Admin
                                     </button>
                                 </form>
@@ -42,6 +42,7 @@
                     @endforeach
                 </tbody>
             </table>
-        </div>
+        </div> <br>
+        @include('users.footer')
     @endempty
 @endsection

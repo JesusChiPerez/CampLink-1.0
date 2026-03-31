@@ -50,7 +50,7 @@ class ProfileController extends Controller
 
             return redirect()
                 ->route('profile.edit')
-                ->withSuccess('Profile edited');
+                ->withSuccess('Perfil Editado.');
         }, 5);
     }
 }

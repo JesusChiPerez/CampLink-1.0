@@ -34,4 +34,5 @@
         @endempty
     </div>
 </div>
+@include('users.footer')
 @endsection

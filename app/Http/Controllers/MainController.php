@@ -21,7 +21,7 @@ class MainController extends Controller
     }
 
     /**
-     * ✅ Muestra SOLO los productos en la tienda/catálogo
+     *  Muestra SOLO los productos en la tienda/catálogo
      * COMPLETAMENTE PÚBLICA - sin autenticación requerida
      * SIN middleware, SIN restricciones
      * 

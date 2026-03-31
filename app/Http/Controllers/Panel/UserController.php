@@ -27,6 +27,6 @@ class UserController extends Controller
 
         return redirect()
             ->route('users.index')
-            ->withSuccess("Admin status for user {$user->id} was toggled.");
+            ->withSuccess("Se cambió el estado de administrador para el usuario {$user->id}.");
     }
 }

@@ -36,7 +36,7 @@ class ProductController extends Controller
         // return redirect()->action('ProductController@index');
         return redirect()
             ->route('products.index')
-            ->withSuccess("The new product with id {$product->id} was created");
+            ->withSuccess("El nuevo producto con ID: {$product->id} fue creado");
         // ->with(['success' => "The new product with id {$product->id} was created"]);
     }
 
@@ -77,7 +77,7 @@ class ProductController extends Controller
 
         return redirect()
             ->route('products.index')
-            ->withSuccess("The new product with id {$product->id} was edited");
+            ->withSuccess("El producto con ID: {$product->id} fue editado");
     }
 
     public function destroy(PanelProduct $product)
@@ -86,6 +86,6 @@ class ProductController extends Controller
 
         return redirect()
             ->route('products.index')
-            ->withSuccess("The new product with id {$product->id} was deleted");
+            ->withSuccess("El producto con ID: {$product->id} fue eliminado");
     }
 }

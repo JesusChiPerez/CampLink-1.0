@@ -28,13 +28,13 @@
                 action="{{ route('products.carts.destroy', ['cart' => $cart->id, 'product' => $product->id]) }}">
                 @csrf
                 @method('DELETE')
-                <button type="submit" class="btn btn-warning">Remove from cart</button>
+                <button type="submit" class="btn btn-warning">Quitar del carrito</button>
             </form>
         @else
             <form class="d-inline" method="POST"
                 action="{{ route('products.carts.store', ['product' => $product->id]) }}">
                 @csrf
-                <button type="submit" class="btn btn-success">Add to cart</button>
+                <button type="submit" class="btn btn-success">Agregar al Carrito</button>
             </form>
         @endif
     </div>

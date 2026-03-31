@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>Order details</h1>
-    <h4 class="text-center"><strong>Grand total: </strong>{{ $cart->total }}</h4>
+    <h1>Detalles de mi Orden</h1>
+    <h4 class="text-center"><strong>Total a pagar: </strong>{{ $cart->total }}</h4>
 
     <div class="text-center mb-3">
         <form class="d-inline" method="POST" action="{{ route('orders.store') }}">
             @csrf
-            <button type="submit" class="btn btn-success">Confirm order</button>
+            <button type="submit" class="btn btn-success">Confirmar pedido</button>
         </form>
     </div>
 
@@ -15,9 +15,9 @@
         <table class="table table-striped">
             <thead class="thead-light">
                 <tr>
-                    <th>Product</th>
-                    <th>Price</th>
-                    <th>Quantity</th>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
                     <th>Total</th>
                 </tr>
             </thead>
@@ -39,5 +39,6 @@
                 @endforeach
             </tbody>
         </table>
-    </div>
+    </div><br>
+    @include('users.footer')
 @endsection

@@ -36,7 +36,7 @@ class ProductCartController extends Controller
 
         if ($product->stock < $quantity + 1) {
             throw ValidationException::withMessages([
-                'product' => "There is not enough stock for the quantity you required of {$product->title}",
+                'product' => "No hay suficiente stock para el producto {$product->title}",
             ]);
         }
 

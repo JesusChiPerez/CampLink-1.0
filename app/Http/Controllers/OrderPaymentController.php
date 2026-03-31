@@ -54,7 +54,7 @@ class OrderPaymentController extends Controller
 
             return redirect()
                 ->route('main')
-                ->withSuccess("Tanks! Your payment for \${$order->total} was successful.");
+                ->withSuccess("¡Gracias! Su pago de  \${$order->total} se realizó correctamente.");
         }, 5);
     }
 }

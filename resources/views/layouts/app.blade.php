@@ -44,7 +44,8 @@
                             <a class="nav-link" href="#">¿Quienes Somos?</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('products.index') }}">Productos</a>
+                            {{--  CAMBIO: Usar route('tienda') en lugar de route('products.index') --}}
+                            <a class="nav-link" href="{{ route('tienda') }}">Productos</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Oferta</a>
@@ -65,7 +66,8 @@
 
                     <ul class="navbar-nav ms-auto align-items-center">
                         <li class="nav-item me-3">
-    <form action="{{ route('products.index') }}" method="GET" class="d-flex">
+    {{--  CAMBIO: Usar route('tienda') en lugar de route('products.index') --}}
+    <form action="{{ route('tienda') }}" method="GET" class="d-flex">
         <div class="input-group">
             <span class="input-group-text bg-light border-end-0">
                 <i class="bi bi-search"></i> </span>

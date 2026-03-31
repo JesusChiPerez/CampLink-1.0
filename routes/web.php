@@ -17,17 +17,20 @@ use Illuminate\Support\Facades\Route;
 // Ruta principal - PÚBLICA
 Route::get('/', 'MainController@index')->name('main');
 
-// ✅ Ruta de productos PÚBLICA - SIN MIDDLEWARE
-Route::get('/productos', 'MainController@productos')->name('products.index');
+//  CAMBIO: Cambiar el nombre de la ruta para evitar conflicto con panel/products
+// Ahora la ruta pública se llama 'tienda' en lugar de 'products.index'
+Route::get('/productos', 'MainController@productos')->name('tienda');
 
 Route::get('profile', 'ProfileController@edit')->name('profile.edit');
 
 Route::put('profile', 'ProfileController@update')->name('profile.update');
 
+//  CARRITO - Permitir agregar sin autenticación
 Route::resource('products.carts', 'ProductCartController')->only(['store', 'destroy']);
 
 Route::resource('carts', 'CartController')->only(['index']);
 
+// Rutas de órdenes y pagos
 Route::resource('orders', 'OrderController')
     ->only(['create', 'store'])
     ->middleware(['verified']);

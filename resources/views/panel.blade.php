@@ -9,6 +9,7 @@
 
                     <div class="card-body">
                         <div class="list-group">
+                            {{--  CORREGIDO: Usa 'products.index' que en el contexto del panel es /panel/products --}}
                             <a class="list-group-item" href="{{ route('products.index') }}">
                                 Gestionar productos
                             </a>

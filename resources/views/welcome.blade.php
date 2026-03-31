@@ -18,8 +18,8 @@
                 Texto referente a lo que se dedica la tienda. Texto referente que se dedica la tienda. 
                 Texto referente que se dedica la tienda. Texto referente que se dedica la tienda.
             </p>
-            {{-- El botón "Comprar ahora" ahora apunta a la ruta pública de productos --}}
-            <a href="{{ route('products.index') }}" class="btn btn-success btn-lg px-4 mt-3">Comprar ahora</a>
+            {{--  CAMBIO: Usar route('tienda') en lugar de route('products.index') --}}
+            <a href="{{ route('tienda') }}" class="btn btn-success btn-lg px-4 mt-3">Comprar ahora</a>
         </div>
     </div>
 
@@ -44,8 +44,5 @@
     @include('users.publicate-seccion')
     @include('users.aprovecha-seccion')
     @include('users.footer')
-
-    {{-- ✅ LA SECCIÓN DE PRODUCTOS HA SIDO ELIMINADA DE AQUÍ --}}
-    {{-- Ahora está en su propia ruta: /productos --}}
 </div>
 @endsection

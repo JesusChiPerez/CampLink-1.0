@@ -21,6 +21,7 @@
         <p class="card-text">{{ $product->description }}</p>
         <p class="card-text"><strong>{{ $product->stock }} left</strong></p>
         @if (isset($cart))
+            {{-- Si existe $cart, el usuario está en la página del carrito --}}
             <p class="card-text">{{ $product->pivot->quantity }} in your cart
                 <strong>(${{ $product->total }})</strong>
             </p>
@@ -31,11 +32,18 @@
                 <button type="submit" class="btn btn-warning">Quitar del carrito</button>
             </form>
         @else
-            <form class="d-inline" method="POST"
-                action="{{ route('products.carts.store', ['product' => $product->id]) }}">
-                @csrf
-                <button type="submit" class="btn btn-success">Agregar al Carrito</button>
-            </form>
+            {{-- Si NO está logueado, mostrar botón de login --}}
+            @guest
+                <p class="card-text text-muted">Inicia sesión para agregar al carrito</p>
+                <a href="{{ route('login') }}" class="btn btn-primary">Iniciar Sesión</a>
+            @else
+                {{-- Si está logueado, mostrar botón para agregar al carrito --}}
+                <form class="d-inline" method="POST"
+                    action="{{ route('products.carts.store', ['product' => $product->id]) }}">
+                    @csrf
+                    <button type="submit" class="btn btn-success">Agregar al Carrito</button>
+                </form>
+            @endguest
         @endif
     </div>
 </div>

@@ -20,6 +20,20 @@ Route::get('/', 'MainController@index')->name('main');
 // Ruta pública de productos - PÚBLICA
 Route::get('/productos', 'MainController@productos')->name('tienda');
 
+// RUTAS DEL PANEL DE MENU DESPLEGABLE (INFORMACION DE LA EMPRESA) - PÚBLICAS
+Route::get('/historia', function () {
+    return view('menu.historia');
+})->name('historia');
+
+Route::get('/misionvision', function () {
+    return view('menu.misionvision');
+})->name('misionvision');
+
+Route::get('/valores', function () {
+    return view('menu.valores');
+})->name('valores');
+
+//FIN DE MENU DESPLEGABLE
 Route::get('profile', 'ProfileController@edit')->name('profile.edit');
 
 Route::put('profile', 'ProfileController@update')->name('profile.update');

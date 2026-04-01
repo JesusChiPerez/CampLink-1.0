@@ -1,10 +1,11 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
+<link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 <link href="{{ asset('css/bansup.css') }}" rel="stylesheet">
 <link href="{{ asset('css/footer.css') }}" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -40,11 +41,32 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">¿Quienes Somos?</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="acercaDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Acerca de
+                            </a>
+
+                            <ul class="dropdown-menu" aria-labelledby="acercaDropdown">
+                                <li>
+                                    <a class="dropdown-item" href="{{ route('historia') }}">
+                                        Historia
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{{ route('misionvision') }}">
+                                        Misión y Visión
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{{ route('valores') }}">
+                                        Valores
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="nav-item">
-                            {{--  CAMBIO: Usar route('tienda') en lugar de route('products.index') --}}
+                            {{-- CAMBIO: Usar route('tienda') en lugar de route('products.index') --}}
                             <a class="nav-link" href="{{ route('tienda') }}">Productos</a>
                         </li>
                         <li class="nav-item">
@@ -56,7 +78,7 @@
                                 Mis Compras ({{ $cartService->countProducts() }})
                             </a>
                         </li>
-                        
+
                         @if (optional(auth()->user())->isAdmin())
                             <li class="nav-item">
                                 <a class="nav-link text-primary" href="{{ route('panel') }}">Panel Admin</a>
@@ -66,15 +88,16 @@
 
                     <ul class="navbar-nav ms-auto align-items-center">
                         <li class="nav-item me-3">
-    {{--  CAMBIO: Usar route('tienda') en lugar de route('products.index') --}}
-    <form action="{{ route('tienda') }}" method="GET" class="d-flex">
-        <div class="input-group">
-            <span class="input-group-text bg-light border-end-0">
-                <i class="bi bi-search"></i> </span>
-            <input name="search" class="form-control border-start-0 bg-light" type="search" placeholder="Buscar producto" aria-label="Search">
-        </div>
-    </form>
-</li>
+                            {{-- CAMBIO: Usar route('tienda') en lugar de route('products.index') --}}
+                            <form action="{{ route('tienda') }}" method="GET" class="d-flex">
+                                <div class="input-group">
+                                    <span class="input-group-text bg-light border-end-0">
+                                        <i class="bi bi-search"></i> </span>
+                                    <input name="search" class="form-control border-start-0 bg-light" type="search"
+                                        placeholder="Buscar producto" aria-label="Search">
+                                </div>
+                            </form>
+                        </li>
 
                         @guest
                             @if (Route::has('login'))
@@ -97,9 +120,8 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                        onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                         document.getElementById('logout-form').submit();">
                                         {{ __('Cerrar Sesión') }}
                                     </a>
 

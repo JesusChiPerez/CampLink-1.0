@@ -1,22 +1,43 @@
 @extends('layouts.app')
 
+@push('styles')
+<link rel="stylesheet" href="{{ asset('css/carrito/carts.css') }}">
+@endpush
+
 @section('content')
-    <h1>Tu carrito de compras</h1>
+
+<div class="container cart-container">
+
+    <h1 class="cart-title">Tu carrito de compras</h1>
+
     @if (!isset($cart) || $cart->products->isEmpty())
-        <div class="alert alert-warning">
+
+        <div class="alert alert-warning cart-empty">
             Tu carrito está vacío.
         </div>
+
     @else
-        <h4 class="text-center"><strong>Tu total en el carrito: </strong>{{ $cart->total }}</h4>
-        <a class="btn btn-success mb-3" href="{{ route('orders.create') }}">Iniciar pedido</a>
-        <div class="row">
+
+        <h4 class="cart-total">
+            <strong>Total: </strong> ${{ $cart->total }}
+        </h4>
+
+        <a class="cart-btn" href="{{ route('orders.create') }}">
+            Iniciar pedido
+        </a>
+
+        <div class="row cart-grid">
             @foreach ($cart->products as $product)
-                <div class="col-3">
+                <div class="col-md-3 col-sm-6 mb-4">
                     @include('components.product-card')
                 </div>
             @endforeach
         </div>
+
     @endif
-    <br>
-    @include('users.footer')
+
+</div>
+
+@include('users.footer')
+
 @endsection

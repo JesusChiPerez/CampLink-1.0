@@ -1,19 +1,29 @@
 @extends('layouts.app')
 
+@push('styles')
+<link rel="stylesheet" href="{{ asset('css/carrito/order.css') }}">
+@endpush
+
 @section('content')
-    <h1>Detalles de mi Orden</h1>
-    <h4 class="text-center"><strong>Total a pagar: </strong>{{ $cart->total }}</h4>
 
-    <div class="text-center mb-3">
-        <form class="d-inline" method="POST" action="{{ route('orders.store') }}">
-            @csrf
-            <button type="submit" class="btn btn-success">Confirmar pedido</button>
-        </form>
-    </div>
+<div class="container order-container">
 
-    <div class="table-responsive">
-        <table class="table table-striped">
-            <thead class="thead-light">
+    <h1 class="order-title">Detalles de mi Orden</h1>
+
+    <h4 class="order-total">
+        <strong>Total a pagar:</strong> ${{ $cart->total }}
+    </h4>
+
+    <form method="POST" action="{{ route('orders.store') }}">
+        @csrf
+        <button type="submit" class="order-btn">
+            Confirmar pedido
+        </button>
+    </form>
+
+    <div class="table-responsive order-table">
+        <table class="table table-striped mb-0">
+            <thead>
                 <tr>
                     <th>Producto</th>
                     <th>Precio</th>
@@ -21,24 +31,35 @@
                     <th>Total</th>
                 </tr>
             </thead>
+
             <tbody>
                 @foreach ($cart->products as $product)
                     <tr>
+
                         <td>
-                            <img src="{{ asset($product->images->first()->path) }}" width="100">
-                            {{ $product->title }}
+                            <div class="product-info">
+                                <img src="{{ asset($product->images->first()->path) }}" width="80">
+                                <span>{{ $product->title }}</span>
+                            </div>
                         </td>
-                        <td>{{ $product->price }}</td>
+
+                        <td>${{ $product->price }}</td>
+
                         <td>{{ $product->pivot->quantity }}</td>
-                        <td>
-                            <strong>
-                                ${{ $product->total }}
-                            </strong>
+
+                        <td class="product-total">
+                            ${{ $product->total }}
                         </td>
+
                     </tr>
                 @endforeach
             </tbody>
+
         </table>
-    </div><br>
-    @include('users.footer')
+    </div>
+
+</div>
+
+@include('users.footer')
+
 @endsection

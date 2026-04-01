@@ -1,0 +1,144 @@
+/* ============================= */
+/*  Barra superior (oferta) */
+/* ============================= */
+.top-announcement-bar {
+    background: linear-gradient(135deg, #28a745, #1e7e34);
+    color: #fff;
+    text-align: center;
+    font-weight: 500;
+    padding: 8px 0;
+    font-size: 0.9rem;
+}
+
+/* ============================= */
+/* 🧭 NAVBAR */
+/* ============================= */
+.navbar {
+    border-bottom: 1px solid #eee;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: #28a745 !important;
+}
+
+/* Links */
+.navbar-nav .nav-link {
+    font-weight: 500;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #28a745 !important;
+}
+
+/* Panel admin destacado */
+.navbar-nav .nav-link.text-primary {
+    font-weight: bold;
+    color: #28a745 !important;
+}
+
+/* ============================= */
+/*  DROPDOWN */
+/* ============================= */
+.dropdown-menu {
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    padding: 10px;
+}
+
+.dropdown-item {
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background: #f1fdf5;
+    color: #28a745;
+}
+
+/* ============================= */
+/*  BUSCADOR */
+/* ============================= */
+.input-group {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.input-group-text {
+    border-radius: 10px 0 0 10px;
+}
+
+.input-group .form-control {
+    border-radius: 0 10px 10px 0;
+}
+
+.input-group .form-control:focus {
+    box-shadow: none;
+    border-color: #28a745;
+}
+
+/* ============================= */
+/*  AVATAR */
+/* ============================= */
+.navbar img.rounded-circle {
+    object-fit: cover;
+    border: 2px solid #28a745;
+    transition: all 0.3s ease;
+}
+
+.navbar img.rounded-circle:hover {
+    transform: scale(1.05);
+}
+
+/* ============================= */
+/*  ALERTAS */
+/* ============================= */
+.alert {
+    border-radius: 12px;
+    margin: 15px auto;
+    max-width: 900px;
+}
+
+/* Success */
+.alert-success {
+    background: #e8f5e9;
+    color: #1e7e34;
+    border: none;
+}
+
+/* Error */
+.alert-danger {
+    background: #fdecea;
+    color: #dc3545;
+    border: none;
+}
+
+/* ============================= */
+/*  MAIN CONTENT */
+/* ============================= */
+main {
+    min-height: 70vh;
+}
+
+/* ============================= */
+/*  RESPONSIVE */
+/* ============================= */
+@media (max-width: 768px) {
+
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .input-group {
+        width: 100%;
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+}

@@ -1,26 +1,45 @@
 @extends('layouts.app')
 
-@section('content')<br><br><br><br><br><br>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Panel de Administrador</div>
+@push('styles')
+<link rel="stylesheet" href="{{ asset('css/users/panel.css') }}">
+@endpush
 
-                    <div class="card-body">
-                        <div class="list-group">
-                            {{--  CORREGIDO: Usa 'products.index' que en el contexto del panel es /panel/products --}}
-                            <a class="list-group-item" href="{{ route('products.index') }}">
-                                Gestionar productos
-                            </a>
-                            <a class="list-group-item" href="{{ route('users.index') }}">
-                                Gestionar usuarios
-                            </a>
-                        </div>
+@section('content')
+
+<div class="container panel-container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+
+            <div class="card panel-card">
+
+                <div class="panel-header">
+                    Panel de Administrador
+                </div>
+
+                <div class="panel-body">
+                    <div class="list-group panel-list">
+
+                        <a class="list-group-item d-flex align-items-center justify-content-center gap-2"
+                           href="{{ route('products.index') }}">
+                            <i class="bi bi-box-seam"></i>
+                            Gestionar productos
+                        </a>
+
+                        <a class="list-group-item d-flex align-items-center justify-content-center gap-2"
+                           href="{{ route('users.index') }}">
+                            <i class="bi bi-people"></i>
+                            Gestionar usuarios
+                        </a>
+
                     </div>
                 </div>
+
             </div>
+
         </div>
-    </div> <br> <br><br><br><br><br><br><br>
-    @include('users.footer')
+    </div>
+</div>
+
+@include('users.footer')
+
 @endsection

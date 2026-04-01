@@ -1,0 +1,86 @@
+/* Contenedor */
+.edit-container {
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+/* Card */
+.edit-card {
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Header */
+.edit-header {
+    background: linear-gradient(135deg, #ffc107, #e0a800);
+    color: #212529;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Body */
+.edit-body {
+    padding: 30px;
+}
+
+/* Form rows */
+.edit-body .form-row {
+    margin-bottom: 20px;
+}
+
+/* Labels */
+.edit-body label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Inputs */
+.edit-body .form-control,
+.edit-body .custom-select {
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+.edit-body .form-control:focus,
+.edit-body .custom-select:focus {
+    border-color: #ffc107;
+    box-shadow: 0 0 5px rgba(255,193,7,0.4);
+}
+
+/* Botón */
+.btn-edit-save {
+    display: block;
+    width: 100%;
+    border-radius: 12px;
+    padding: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background: linear-gradient(135deg, #ffc107, #e0a800);
+    color: #212529;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-edit-save:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* File input */
+.custom-file-input {
+    border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .edit-body {
+        padding: 20px;
+    }
+}

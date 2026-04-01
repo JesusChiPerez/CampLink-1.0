@@ -1,0 +1,67 @@
+/* Contenedor */
+.cart-container {
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+/* Título */
+.cart-title {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Total */
+.cart-total {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+/* Botón pedido */
+.cart-btn {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 30px auto;
+    padding: 10px 25px;
+    border-radius: 10px;
+    font-weight: 600;
+    background: linear-gradient(135deg, #28a745, #1e7e34);
+    color: #fff !important;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.cart-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Grid productos */
+.cart-grid {
+    margin-top: 20px;
+}
+
+/* Alert vacío */
+.cart-empty {
+    text-align: center;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+/* Ajuste tarjetas */
+.cart-grid .card {
+    transition: all 0.3s ease;
+}
+
+.cart-grid .card:hover {
+    transform: translateY(-5px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cart-btn {
+        width: 100%;
+        text-align: center;
+    }
+}

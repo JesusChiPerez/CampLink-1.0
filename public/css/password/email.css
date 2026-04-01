@@ -1,0 +1,75 @@
+/* Contenedor */
+.email-container {
+    margin-top: 60px;
+}
+
+/* Card */
+.email-card {
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Header */
+.email-header {
+    background: linear-gradient(135deg, #28a745, #1e7e34);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+/* Body */
+.email-body {
+    padding: 30px;
+}
+
+/* Inputs */
+.email-body .form-control {
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+.email-body .form-control:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 5px rgba(40,167,69,0.3);
+}
+
+/* Labels */
+.email-body label {
+    font-weight: 600;
+    color: #333;
+}
+
+/* Botón */
+.email-btn {
+    background: #28a745;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.email-btn:hover {
+    background: #1e7e34;
+    transform: translateY(-2px);
+}
+
+/* Alerta éxito */
+.email-alert {
+    border-radius: 10px;
+    background: #e9f7ef;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .email-body {
+        padding: 20px;
+    }
+}

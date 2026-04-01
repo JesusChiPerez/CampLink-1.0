@@ -1,0 +1,66 @@
+/* Contenedor */
+.panel-container {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+/* Card principal */
+.panel-card {
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Header */
+.panel-header {
+    background: linear-gradient(135deg, #28a745, #1e7e34);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+/* Body */
+.panel-body {
+    padding: 30px;
+}
+
+/* Lista */
+.panel-list .list-group-item {
+    border: none;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    padding: 15px;
+    font-weight: 500;
+    text-align: center;
+    background: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+/* Hover */
+.panel-list .list-group-item:hover {
+    background: #e8f5e9;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Links */
+.panel-list a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .panel-body {
+        padding: 20px;
+    }
+}
+
+/* Iconos dentro del panel */
+.panel-list i {
+    font-size: 1.2rem;
+    color: #28a745;
+}

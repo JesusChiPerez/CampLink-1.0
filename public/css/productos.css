@@ -1,0 +1,146 @@
+/* Contenedor general */
+.productos-container {
+    padding-top: 40px;
+}
+
+/* Panel admin */
+.admin-panel {
+    border-radius: 12px;
+    padding: 25px;
+    background: #e8f5e9;
+    border-left: 5px solid #28a745;
+    text-align: center;
+}
+
+.admin-panel h5 {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.admin-panel p {
+    margin-bottom: 15px;
+    color: #444;
+}
+
+/* Botón admin */
+.admin-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 25px;
+    border-radius: 10px;
+    font-weight: 600;
+    background: linear-gradient(135deg, #28a745, #1e7e34);
+    color: #fff !important;
+    text-decoration: none;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.admin-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Título */
+.productos-title {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Grid productos */
+.productos-grid {
+    margin-top: 20px;
+}
+
+/* Card producto */
+.productos-grid .card {
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.productos-grid .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+
+/* Imagen */
+.productos-grid .card img {
+    height: 180px;
+    object-fit: cover;
+}
+
+/* Body */
+.productos-grid .card-body {
+    padding: 15px;
+}
+
+/* Título producto */
+.productos-grid .card-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+/* Precio */
+.productos-grid .price {
+    color: #28a745;
+    font-weight: bold;
+}
+
+/* Botones dentro card */
+.productos-grid .btn {
+    border-radius: 8px;
+}
+
+/* Mensaje sin productos */
+.no-productos {
+    border-radius: 10px;
+    background: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .productos-grid .card img {
+        height: 150px;
+    }
+}
+
+
+/*PRODUCT-CARD BOTONES*/
+/* Botones del product card */
+.product-btn {
+    display: block;
+    width: fit-content;
+    margin: 15px auto 0 auto;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    text-align: center;
+    background: linear-gradient(135deg, #28a745, #1e7e34);
+    color: #fff !important;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.product-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Texto centrado dentro de la card */
+.product-card-body {
+    text-align: center;
+}
+
+/* Precio destacado */
+.product-price {
+    font-size: 1.4rem;
+    color: #28a745;
+    margin-bottom: 10px;
+}
+

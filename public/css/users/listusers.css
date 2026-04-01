@@ -1,0 +1,91 @@
+/* Contenedor */
+.users-container {
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+/* Título */
+.users-title {
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+/* Tabla */
+.users-table {
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+/* Header */
+.users-table thead {
+    background: #28a745;
+    color: #fff;
+}
+
+/* Celdas */
+.users-table th,
+.users-table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Hover filas */
+.users-table tbody tr:hover {
+    background: #f1fdf5;
+}
+
+/* Badge admin */
+.badge-admin {
+    background: #28a745;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+}
+
+.badge-user {
+    background: #6c757d;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+}
+
+/* Botón toggle */
+.btn-toggle {
+    border-radius: 8px;
+    padding: 5px 12px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+/* Botón hacer admin */
+.btn-make-admin {
+    color: #28a745;
+}
+
+/* Botón quitar admin */
+.btn-remove-admin {
+    color: #dc3545;
+}
+
+/* Hover botones */
+.btn-toggle:hover {
+    transform: translateY(-2px);
+}
+
+/* Alert vacío */
+.users-empty {
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .users-title {
+        text-align: center;
+    }
+}

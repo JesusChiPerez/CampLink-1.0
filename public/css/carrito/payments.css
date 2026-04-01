@@ -1,0 +1,61 @@
+/* Contenedor */
+.payment-container {
+    margin-top: 60px;
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+/* Card */
+.payment-card {
+    max-width: 500px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+/* Header */
+.payment-header {
+    background: linear-gradient(135deg, #28a745, #1e7e34);
+    color: #fff;
+    padding: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Body */
+.payment-body {
+    padding: 30px;
+}
+
+/* Total */
+.payment-total {
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+/* Botón pagar */
+.payment-btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: linear-gradient(135deg, #28a745, #1e7e34);
+    color: #fff;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.payment-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Texto auxiliar */
+.payment-note {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #666;
+}

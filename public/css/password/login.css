@@ -1,0 +1,83 @@
+/* Fondo general */
+.login-container {
+    margin-top: 60px;
+}
+
+/* Card */
+.login-card {
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Header */
+.login-header {
+    background: linear-gradient(135deg, #28a745, #218838);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+/* Body */
+.login-body {
+    padding: 30px;
+}
+
+/* Inputs */
+.login-body .form-control {
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+.login-body .form-control:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 5px rgba(40,167,69,0.3);
+}
+
+/* Labels */
+.login-body label {
+    font-weight: 600;
+    color: #333;
+}
+
+/* Checkbox */
+.form-check-input:checked {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+/* Botón */
+.login-btn {
+    background: #28a745;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+    background: #218838;
+    transform: translateY(-2px);
+}
+
+/* Link */
+.login-link {
+    color: #28a745;
+    text-decoration: none;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .login-body {
+        padding: 20px;
+    }
+}

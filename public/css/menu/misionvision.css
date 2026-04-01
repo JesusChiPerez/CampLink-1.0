@@ -1,0 +1,80 @@
+/* Contenedor */
+.mv-container {
+    margin-top: 40px;
+}
+
+/* Card general */
+.mv-card {
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* Header */
+.mv-header {
+    background: linear-gradient(135deg, #28a745, #218838);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Body */
+.mv-body {
+    padding: 30px;
+    background-color: #ffffff;
+}
+
+/* Bloques Misión / Visión */
+.mv-box {
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover */
+.mv-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Misión */
+.mv-mision {
+    background: #e9f7ef;
+    border-left: 6px solid #28a745;
+}
+
+/* Visión */
+.mv-vision {
+    background: #eef4ff;
+    border-left: 6px solid #28a745;
+}
+
+/* Títulos */
+.mv-box h4 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Texto */
+.mv-box p {
+    margin: 0;
+    line-height: 1.7;
+    color: #444;
+    text-align: justify;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .mv-body {
+        padding: 20px;
+    }
+
+    .mv-header {
+        font-size: 1.3rem;
+    }
+}

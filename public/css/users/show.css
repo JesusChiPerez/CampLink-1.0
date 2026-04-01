@@ -1,0 +1,38 @@
+/* Contenedor principal */
+.show-container {
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+
+/* Card wrapper */
+.show-card-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+/* Ajuste del card */
+.show-card-wrapper .card {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    transition: all 0.3s ease;
+}
+
+/* Hover */
+.show-card-wrapper .card:hover {
+    transform: translateY(-5px);
+}
+
+/* Imagen */
+.show-card-wrapper img {
+    object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .show-card-wrapper .card {
+        max-width: 100%;
+    }
+}

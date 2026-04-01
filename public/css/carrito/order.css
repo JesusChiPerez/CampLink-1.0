@@ -1,0 +1,88 @@
+/* Contenedor */
+.order-container {
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+/* Título */
+.order-title {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Total */
+.order-total {
+    text-align: center;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+/* Botón confirmar */
+.order-btn {
+    display: block;
+    margin: 0 auto 30px auto;
+    padding: 12px 30px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    background: linear-gradient(135deg, #28a745, #1e7e34);
+    color: #fff !important;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.order-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Tabla */
+.order-table {
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+}
+
+/* Header */
+.order-table thead {
+    background: #28a745;
+    color: #fff;
+}
+
+/* Celdas */
+.order-table th,
+.order-table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Producto (imagen + nombre) */
+.product-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.product-info img {
+    border-radius: 8px;
+}
+
+/* Total por producto */
+.product-total {
+    color: #28a745;
+    font-weight: bold;
+}
+
+/* Hover filas */
+.order-table tbody tr:hover {
+    background: #f1fdf5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .product-info {
+        flex-direction: column;
+        text-align: center;
+    }
+}

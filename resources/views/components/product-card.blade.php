@@ -1,3 +1,7 @@
+
+@push('styles')
+<link rel="stylesheet" href="{{ asset('css/productos.css') }}">
+@endpush
 <div class="card mt-3">
 
     <div id="carousel{{ $product->id }}" class="carousel slide carousel-fade">
@@ -15,35 +19,54 @@
             <span class="carousel-control-next-icon"></span>
         </a>
     </div>
-    <div class="card-body">
-        <h4 class="text-right"><strong>${{ $product->price }}</strong></h4>
+
+    <div class="card-body product-card-body">
+
+        <h4 class="product-price"><strong>${{ $product->price }}</strong></h4>
+
         <h5 class="card-title">{{ $product->title }}</h5>
+
         <p class="card-text">{{ $product->description }}</p>
-        <p class="card-text"><strong>{{ $product->stock }} left</strong></p>
+
+        <p class="card-text"><strong>{{ $product->stock }} disponibles</strong></p>
+
         @if (isset($cart))
-            {{-- Si existe $cart, el usuario está en la página del carrito --}}
-            <p class="card-text">{{ $product->pivot->quantity }} in your cart
+            <p class="card-text">
+                {{ $product->pivot->quantity }} en tu carrito
                 <strong>(${{ $product->total }})</strong>
             </p>
-            <form class="d-inline" method="POST"
+
+            <form method="POST"
                 action="{{ route('products.carts.destroy', ['cart' => $cart->id, 'product' => $product->id]) }}">
                 @csrf
                 @method('DELETE')
-                <button type="submit" class="btn btn-warning">Quitar del carrito</button>
+
+                <button type="submit" class="product-btn">
+                    Quitar del carrito
+                </button>
             </form>
+
         @else
-            {{-- Si NO está logueado, mostrar botón de login --}}
+
             @guest
                 <p class="card-text text-muted">Inicia sesión para agregar al carrito</p>
-                <a href="{{ route('login') }}" class="btn btn-primary">Iniciar Sesión</a>
+
+                <a href="{{ route('login') }}" class="product-btn">
+                    Iniciar Sesión
+                </a>
+
             @else
-                {{-- Si está logueado, mostrar botón para agregar al carrito --}}
-                <form class="d-inline" method="POST"
+                <form method="POST"
                     action="{{ route('products.carts.store', ['product' => $product->id]) }}">
                     @csrf
-                    <button type="submit" class="btn btn-success">Agregar al Carrito</button>
+
+                    <button type="submit" class="product-btn">
+                        Agregar al Carrito
+                    </button>
                 </form>
             @endguest
+
         @endif
+
     </div>
 </div>

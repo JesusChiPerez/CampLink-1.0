@@ -1,0 +1,92 @@
+/* Contenedor */
+.products-container {
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+/* Título */
+.products-title {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Botón agregar */
+.btn-add-product {
+    background: linear-gradient(135deg, #28a745, #1e7e34);
+    color: #fff !important;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-add-product:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Tabla */
+.products-table {
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+}
+
+/* Header tabla */
+.products-table thead {
+    background: #28a745;
+    color: #fff;
+}
+
+.products-table th {
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Filas */
+.products-table td {
+    vertical-align: middle;
+    text-align: center;
+}
+
+/* Hover filas */
+.products-table tbody tr:hover {
+    background: #f1fdf5;
+}
+
+/* Botones acciones */
+.action-btn {
+    border-radius: 8px;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    margin: 2px;
+}
+
+/* Ver */
+.btn-view {
+    color: #0d6efd;
+}
+
+/* Editar */
+.btn-edit {
+    color: #ffc107;
+}
+
+/* Eliminar */
+.btn-delete {
+    color: #dc3545;
+}
+
+/* Alert vacío */
+.empty-alert {
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .products-title {
+        text-align: center;
+    }
+}

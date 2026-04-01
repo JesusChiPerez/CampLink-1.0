@@ -3,6 +3,7 @@
 <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 <link href="{{ asset('css/bansup.css') }}" rel="stylesheet">
+<script src="{{ asset('js/ofertas.js') }}"></script>
 
 <link href="{{ asset('css/footer.css') }}" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -72,7 +73,7 @@
                             <a class="nav-link" href="{{ route('tienda') }}">Productos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Oferta</a>
+                            <a class="nav-link" href="{{ route('ofertas') }}">Ofertas</a>
                         </li>
                         <li class="nav-item">
                             @inject('cartService', 'App\Services\CartService')

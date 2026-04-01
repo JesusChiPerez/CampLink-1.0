@@ -33,6 +33,10 @@ Route::get('/valores', function () {
     return view('menu.valores');
 })->name('valores');
 
+Route::get('/ofertas', function () {
+    return view('users.ofertas');
+})->name('ofertas');
+
 //FIN DE MENU DESPLEGABLE
 Route::get('profile', 'ProfileController@edit')->name('profile.edit');
 

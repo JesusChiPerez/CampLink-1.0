@@ -4,9 +4,11 @@
             <div class="col-md-5">
                 <h1 class="display-3 fw-normal mb-4">Aprovecha</h1>
                 <p class="text-muted">
-                    Mensaje de descuentos por dia. Mensaje de descuentos por dia. Mensaje de descuentos por dia. 
-                    Mensaje de descuentos por dia. Mensaje de descuentos por dia. Mensaje de descuentos por dia. 
-                    Mensaje de descuentos por dia. Mensaje de descuentos por dia. Mensaje de descuentos por dia.
+                    Aprovecha nuestras promociones especiales y descubre productos frescos a precios increíbles.
+                    Cada semana seleccionamos lo mejor del campo para ofrecerte descuentos exclusivos en frutas,
+                    verduras y semillas, garantizando calidad, frescura y el mejor valor directo del productor.
+                    No dejes pasar estas oportunidades y lleva a tu mesa productos naturales al mejor precio.
+
                 </p>
             </div>
 

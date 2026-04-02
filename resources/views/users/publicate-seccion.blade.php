@@ -30,7 +30,7 @@
         </div>
 
         <div class="text-center mt-5">
-            <a href="#" class="btn btn-dark-subscribe px-5 py-2">Suscribete hoy</a>
+            <a href="{{ route('login') }}" class="btn btn-dark-subscribe px-5 py-2">Suscribete hoy</a>
             <p class="text-muted small mt-3">Sujeto a terminos y condiciones</p>
         </div>
     </div>

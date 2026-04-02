@@ -1,0 +1,58 @@
+/* CONTENEDOR GENERAL */
+.productores-container {
+    margin-top: 30px;
+}
+
+/* TÍTULO */
+.titulo-productores {
+    font-weight: bold;
+    color: #28a745;
+}
+
+/* CARD */
+.productor-card {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.productor-card:hover {
+    transform: translateY(-5px);
+}
+
+/* IMAGEN */
+.productor-img img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+/* NOMBRE */
+.productor-nombre {
+    font-weight: bold;
+    color: #28a745;
+    margin-bottom: 10px;
+}
+
+/* INFO */
+.productor-info p,
+.productor-direccion p {
+    font-size: 0.85rem;
+    margin-bottom: 3px;
+}
+
+/* DESCRIPCIÓN */
+.productor-desc {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .productor-img img {
+        height: 180px;
+    }
+}

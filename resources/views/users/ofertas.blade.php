@@ -45,9 +45,9 @@
                 {{-- FRUTAS --}}
                 <div class="col-md-3 producto-item" data-category="frutas" data-price="15">
                     <div class="card producto-card">
-                        <img src="{{ asset('img/products/1.jpg') }}">
+                        <img src="{{ asset('img/products/4.jpg') }}">
                         <div class="card-body">
-                            <h5>Manzana</h5>
+                            <h5>Pepino</h5>
                             <span>$15</span>
                         </div>
                     </div>
@@ -55,7 +55,7 @@
 
                 <div class="col-md-3 producto-item" data-category="frutas" data-price="20">
                     <div class="card producto-card">
-                        <img src="{{ asset('img/products/2.jpg') }}">
+                        <img src="{{ asset('img/products/6.jpg') }}">
                         <div class="card-body">
                             <h5>Sandía</h5>
                             <span>$20</span>
@@ -66,7 +66,7 @@
                 {{-- VERDURAS --}}
                 <div class="col-md-3 producto-item" data-category="verduras" data-price="10">
                     <div class="card producto-card">
-                        <img src="{{ asset('img/products/3.jpg') }}">
+                        <img src="{{ asset('img/products/11.jpg') }}">
                         <div class="card-body">
                             <h5>Zanahoria</h5>
                             <span>$10</span>
@@ -76,7 +76,7 @@
 
                 <div class="col-md-3 producto-item" data-category="verduras" data-price="12">
                     <div class="card producto-card">
-                        <img src="{{ asset('img/products/4.jpg') }}">
+                        <img src="{{ asset('img/products/12.jpg') }}">
                         <div class="card-body">
                             <h5>Lechuga</h5>
                             <span>$12</span>
@@ -87,7 +87,7 @@
                 {{-- SEMILLAS --}}
                 <div class="col-md-3 producto-item" data-category="semillas" data-price="8">
                     <div class="card producto-card">
-                        <img src="{{ asset('img/products/5.jpg') }}">
+                        <img src="{{ asset('img/products/13.jpg') }}">
                         <div class="card-body">
                             <h5>Semillas de Maíz</h5>
                             <span>$8</span>
@@ -97,7 +97,7 @@
 
                 <div class="col-md-3 producto-item" data-category="semillas" data-price="18">
                     <div class="card producto-card">
-                        <img src="{{ asset('img/products/6.jpg') }}">
+                        <img src="{{ asset('img/products/14.jpg') }}">
                         <div class="card-body">
                             <h5>Semillas de Girasol</h5>
                             <span>$18</span>

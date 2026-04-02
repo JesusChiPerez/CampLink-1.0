@@ -15,8 +15,7 @@
         <div class="col-md-6 px-5 py-4">
             <h1 class="display-4 fw-bold">Bienvenido a tu tienda agrícola ideal!</h1>
             <p class="lead mt-3">
-                Texto referente a lo que se dedica la tienda. Texto referente que se dedica la tienda. 
-                Texto referente que se dedica la tienda. Texto referente que se dedica la tienda.
+                En Campliink conectamos directamente a productores agrícolas con consumidores, eliminando intermediarios y promoviendo un comercio más justo, transparente y accesible. Nuestra plataforma está diseñada para impulsar la economía local, ofreciendo productos frescos, de calidad y a precios competitivos. Descubre una nueva forma de comprar, donde apoyas a quienes trabajan la tierra y recibes lo mejor directamente hasta ti.
             </p>
             {{--  CAMBIO: Usar route('tienda') en lugar de route('products.index') --}}
             <a href="{{ route('tienda') }}" class="btn btn-success btn-lg px-4 mt-3">Comprar ahora</a>

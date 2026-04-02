@@ -33,6 +33,10 @@ Route::get('/valores', function () {
     return view('menu.valores');
 })->name('valores');
 
+Route::get('/productores', function () {
+    return view('menu.productores');
+})->name('productores');
+
 Route::get('/ofertas', function () {
     return view('users.ofertas');
 })->name('ofertas');

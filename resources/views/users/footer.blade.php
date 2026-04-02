@@ -81,7 +81,7 @@
         <!--  COPYRIGHT -->
         <div class="text-center pt-4 border-top mt-4">
             <p class="mb-0">
-                © {{ date('Y') }} Camplink. Todos los derechos reservados.
+                © {{ date('Y') }} Campliink. Todos los derechos reservados.
             </p>
         </div>
 
